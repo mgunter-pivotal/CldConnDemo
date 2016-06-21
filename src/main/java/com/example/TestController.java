@@ -25,7 +25,12 @@ public class TestController {
 	@Qualifier("cloudProperties")
 	Properties properties;
 	
+	//@Autowired 
+	//@Qualifier("cloudUrl")
+	//String url;
 	
+   @Autowired
+   SolrRepository solrRepository;
 	
 //	@Value("${vcap.services.MySolr.credentials.SolrEndpoint}")
 //	String solrservice;
@@ -38,9 +43,10 @@ public class TestController {
 	
 		Set <String> titles = new LinkedHashSet<String>();
 		System.out.println(properties.toString());
+		//System.out.println(url +"<<<<<<<endpoint?");
 		//System.out.println("solr info>>>>>>>>>"+solrInfo.getUri());
 		//System.out.println(inventoryDb.toString());
-//		System.out.println(solrservice);
+		System.out.println(solrRepository.solrEndpoint);
 
 		// To display complete Product Name field in dropdown ----------------------------------- */
 		//

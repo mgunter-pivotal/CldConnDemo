@@ -55,4 +55,3 @@ public class CloudPropertiesConfig extends AbstractCloudConfig {
 		   }
 		
 		}
-
