@@ -15,9 +15,11 @@ import java.util.Map;
 
 	    public static final String MySolrID = "MySolrInstance";
 
+	   
 	    public SolrServiceInfoCreator() {
-	        super(new Tags(), MySolrID, "simple","shared");
-	    }
+			// the literal in the tag is CloudFoundry-specific
+			super(new Tags("simple"), "simple", "shared");
+		}
 
 	    @Override
 	    public SolrServiceInfo createServiceInfo(Map<String, Object> serviceData) {
@@ -37,12 +39,14 @@ import java.util.Map;
 	    	System.out.println("In ACCEPT!!!!");
 
 	    	
-			/*boolean typeBasedAccept = serviceConnectorType == null ||
+			boolean typeBasedAccept = serviceConnectorType == null ||
 	                serviceConnectorType.isAssignableFrom(creator.getServiceConnectorType());
 			boolean infoBasedAccept = serviceInfo == null ||
 	                creator.getServiceInfoType().isAssignableFrom(serviceInfo.getClass());
-*/
+
 			//return typeBasedAccept && infoBasedAccept;
 			return true;
 		}
+	    
+	    
 	}

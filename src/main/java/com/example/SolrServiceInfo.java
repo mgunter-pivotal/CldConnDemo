@@ -19,5 +19,9 @@ public String getSolrEndpoint() {
 	return SolrEndpoint;
 }
 
+public void setSolrEndpoint(String solrEndpoint) {
+	SolrEndpoint = solrEndpoint;
+}
+
 
 }

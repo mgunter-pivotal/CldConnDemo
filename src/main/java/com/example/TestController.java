@@ -39,7 +39,7 @@ public class TestController {
 	
 	@ResponseBody
 	@RequestMapping(value = "/", produces = "application/json")
-	public Set<String> dumpData(Model model, @RequestParam("term") String query) {
+	public Set<String> dumpData(Model model) {
 	
 		Set <String> titles = new LinkedHashSet<String>();
 		System.out.println(properties.toString());
